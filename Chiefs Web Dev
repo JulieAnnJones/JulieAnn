@@ -122,7 +122,7 @@
         <div class="players">
             <!-- Xavier Worthy -->
             <div class="player">
-                <img src="C:\Xavier-Worthy-.jpg" alt="Xavier Worthy">
+                <img src="C:\Xavier-Worthy-.webp" alt="Xavier Worthy">
                 <h3 onclick="toggleStats('worthyStats')">Xavier Worthy</h3>
                 <div id="worthyStats" class="stats">
                     <p>Receptions: 7</p>
@@ -144,7 +144,7 @@
 
             <!-- Chris Jones -->
             <div class="player">
-                <img src="C:\chirs jones.jpg" alt="Chris Jones">
+                <img src="C:\chirs jones.webp" alt="Chris Jones">
                 <h3 onclick="toggleStats('jonesStats')">Chris Jones</h3>
                 <div id="jonesStats" class="stats">
                     <p>Sacks: 3</p>
