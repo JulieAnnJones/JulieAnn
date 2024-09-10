@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How About Them Chiefs</title>
+    <style>
+        body {
+            background-color: red;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid yellow;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: yellow;
+            color: red;
+        }
+
+        .page {
+            display: none;
+            padding: 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .players {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .player {
+            text-align: center;
+            width: 30%;
+            border: 2px solid yellow;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .player img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 2px solid yellow;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        footer a:hover {
+            color: yellow;
+        }
+
+        .stats {
+            display: none;
+            background-color: white;
+            color: red;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>How About Them Chiefs</h1>
+        <nav>
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div id="home" class="page active">
+        <h2 style="text-align:center; margin-top:20px;">Players of the Week</h2>
+
+        <div class="players">
+            <!-- Xavier Worthy -->
+            <div class="player">
+                <img src="C:\Xavier-Worthy-.jpg" alt="Xavier Worthy">
+                <h3 onclick="toggleStats('worthyStats')">Xavier Worthy</h3>
+                <div id="worthyStats" class="stats">
+                    <p>Receptions: 7</p>
+                    <p>Yards: 95</p>
+                    <p>Touchdowns: 2</p>
+                </div>
+            </div>
+
+            <!-- Rashee Rice -->
+            <div class="player">
+                <img src="C:\rashee_rice_wildcard_2024.png" alt="Rashee Rice">
+                <h3 onclick="toggleStats('riceStats')">Rashee Rice</h3>
+                <div id="riceStats" class="stats">
+                    <p>Receptions: 5</p>
+                    <p>Yards: 80</p>
+                    <p>Touchdowns: 1</p>
+                </div>
+            </div>
+
+            <!-- Chris Jones -->
+            <div class="player">
+                <img src="C:\chirs jones.jpg" alt="Chris Jones">
+                <h3 onclick="toggleStats('jonesStats')">Chris Jones</h3>
+                <div id="jonesStats" class="stats">
+                    <p>Sacks: 3</p>
+                    <p>Tackles: 6</p>
+                    <p>Forced Fumbles: 1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="page">
+        <h1 style="text-align:center;">This page is dedicated to the players of week 1 against the Ravens.</h1>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="page">
+        <h1 style="text-align:center;">Contact Information</h1>
+        <p style="text-align:center;">Julie Jones</p>
+        <p style="text-align:center;">(785) 534-0225</p>
+    </div>
+
+    <footer>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            var activePage = document.getElementById(pageId);
+            activePage.classList.add('active');
+        }
+
+        function toggleStats(statsId) {
+            // Toggle the stats dropdown visibility
+            var stats = document.getElementById(statsId);
+            stats.style.display = (stats.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
